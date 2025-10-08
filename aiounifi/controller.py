@@ -16,6 +16,7 @@ from .interfaces.firewall_policies import FirewallPolicies
 from .interfaces.firewall_zones import FirewallZones
 from .interfaces.messages import MessageHandler
 from .interfaces.outlets import Outlets
+from .interfaces.object_oriented_network_config import ObjectOrientedNetworkConfigs
 from .interfaces.port_forwarding import PortForwarding
 from .interfaces.ports import Ports
 from .interfaces.sites import Sites
@@ -50,6 +51,7 @@ class Controller:
         self.firewall_zones = FirewallZones(self)
         self.firewall_policies = FirewallPolicies(self)
         self.outlets = Outlets(self)
+        self.object_oriented_network_configs = ObjectOrientedNetworkConfigs(self)
         self.port_forwarding = PortForwarding(self)
         self.ports = Ports(self)
         self.sites = Sites(self)
