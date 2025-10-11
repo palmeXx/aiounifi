@@ -112,11 +112,6 @@ class ObjectOrientedNetworkConfig(ApiItem):
         """ObjectOrientedNetwork config is enabled."""
         return self.raw["enabled"]
 
-    @enabled.setter
-    def enabled(self, value: bool) -> None:
-        """Set enabled status of ObjectOrientedNetwork config."""
-        self.raw["enabled"] = value
-
     @property
     def id(self) -> str:
         """Unique ID of ObjectOrientedNetwork config."""

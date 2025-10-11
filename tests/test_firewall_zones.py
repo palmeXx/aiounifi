@@ -52,7 +52,6 @@ async def test_firewall_zone_update_request(
     )
 
     await unifi_controller.request(FirewallZoneUpdateRequest.create(zone))
-
     assert unifi_called_with(
         "put",
         f"/proxy/network/v2/api/site/default/firewall/zone/{zone_id}",
