@@ -112,6 +112,11 @@ class ObjectOrientedNetworkConfig(ApiItem):
         """ObjectOrientedNetwork config is enabled."""
         return self.raw["enabled"]
 
+    @enabled.setter
+    def enabled(self, value: bool) -> None:
+        """Set enabled status of ObjectOrientedNetwork config."""
+        self.raw["enabled"] = value
+
     @property
     def id(self) -> str:
         """Unique ID of ObjectOrientedNetwork config."""
@@ -169,6 +174,6 @@ class ObjectOrientedNetworkConfigUpdateRequest(ApiRequestV2):
         """Create ObjectOrientedNetwork config update request."""
         return cls(
             method="put",
-            path=f"/object-oriented-network-config/{oonc['_id']}",
+            path=f"/object-oriented-network-config/{oonc['id']}",
             data=oonc,
         )
